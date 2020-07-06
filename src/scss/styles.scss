@@ -10,18 +10,27 @@ h1 {
 	font-weight: $fontWeight;
 }
 
+h2 {
+	font-size: $h2FontSize;
+}
+
+.bold {
+	font-weight: $fontWeight;
+}
+
 header {
+	height: 100%;
 	overflow: hidden;
 	position: relative;
 	.bg-image1 {
 		background-size: cover;
-		img {
-			height: 100vh;
-		}
+		background-image: url("https://static.toss.im/assets/homepage/hero-handset-new.jpg");
+		height: 100%;
+		background-position: 50%;
 	}
 
 	.nav {
-		position: absolute;
+		position: fixed;
 		display: flex;
 		top: 16px;
 		justify-content: space-between;
@@ -68,17 +77,81 @@ header {
 			width: 24px;
 		}
 	}
+
+	.app-download {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		button {
+			bottom: 55px;
+			width: 76%;
+			height: 58px;
+			background-color: #3182f6;
+			color: $whiteFont;
+			font-weight: $fontWeight;
+			font-size: 18px;
+			border-radius: 6px;
+		}
+	}
 }
 
 main {
 	height: 100%;
-}
 
-// .section1 {
-// 	background-image: url(https://static.toss.im/assets/homepage/hero-handset-new.jpg);
-// 	background-size: cover;
-// 	height: 100%;
-// }
+	.section1 {
+		margin-top: 43px;
+		padding: 0 22px;
+	}
+
+	.reward-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		img {
+			width: 127px;
+			height: 58px;
+			padding: 5px;
+		}
+		div {
+		}
+	}
+
+	.reward-txt {
+		margin-top: 20px;
+		position: relative;
+		color: $grayFont;
+		line-height: 38px;
+		text-align: center;
+		img {
+			max-width: 100%;
+			height: 200px;
+		}
+		.reward-txt__text {
+			position: absolute;
+			top: 40px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		.reward-text__btn {
+			margin-top: 25px;
+			a {
+				border: 1px solid #768399;
+				color: #768399;
+				font-size: 16px;
+				font-weight: 700;
+				padding: 14px 12px 14px 18px;
+				vertical-align: middle;
+				border-radius: 24px;
+			}
+			svg {
+				vertical-align: middle;
+			}
+		}
+	}
+}
 
 /* Tablet &amp; Desktop Device
 사용자 해상도가 768px 이상일 때 이 코드가 실행됨. 테블릿과 데스크톱의 공통 코드를 작성한다.
